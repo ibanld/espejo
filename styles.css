@@ -43,6 +43,8 @@
 
 .steps > div
 {
+height: 50vh;
+width: 30vw;
   border:1px rgba(248, 248, 248, 0.67) solid;
   text-align:center;
   box-shadow: 10px 10px 26px 6px rgba(0,0,0,0.75);
@@ -137,25 +139,36 @@
     .steps{
         display: block;
     }
-
-    .first, .second, .third{
-        height: 30vh;
-        width: 30vw;
-        
-    }
+    .steps > div
+{
+height: 50vh;
+width: 30vw;
+  border:1px rgba(248, 248, 248, 0.67) solid;
+  text-align:center;
+  box-shadow: 10px 10px 26px 6px rgba(0,0,0,0.75);
+  margin: 0.2vh;  
+}
 
   }
 
-  @media only screen and (max-width: 320px) {
+  @media only screen and (max-width: 376px) {
     .steps{
         display: block;
     }
+    .steps > div
+{
+height: 30vh;
+width: 45vw;
+}
 
-    .first, .second, .third{
-        height: 30vh;
-        width: 50vw;
-        
-    }
+.footer{
+    justify-content: space-evenly;
+}
+
+.social a{
+    padding-right: 1.5vw;
+}
+
 
   }
 
