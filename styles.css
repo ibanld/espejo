@@ -4,3 +4,44 @@
     box-sizing: border-box;
 }
 
+.instrucciones{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(102, 101, 101);
+}
+
+.espejo{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightgreen;
+    background-image: url("./img/espejo.jpg");
+    background-repeat: repeat;
+    background-size: contain;
+}
+
+.pulsar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background-image: url("./img/espejo.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+
+.btn{
+    cursor: pointer;
+    
+}
+
+.footer{
+    height: 100vh;
+    width: 100vw;
+    background: lightsalmon;
+}

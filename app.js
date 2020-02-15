@@ -1,4 +1,4 @@
-const btn = document.querySelector('.talk');
+const btn = document.querySelector('.btn');
 const content = document.querySelector('.content');
 
 const hablar = [
@@ -44,3 +44,10 @@ function readOutLoud (message){
     
     window.speechSynthesis.speak(speech);
 }
+
+
+let myFullpage = new fullpage('#fullpage', {
+	//options here
+	autoScrolling:true,
+	scrollHorizontally: true
+});
