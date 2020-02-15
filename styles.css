@@ -7,16 +7,77 @@
 .instrucciones{
     height: 100vh;
     width: 100vw;
-    background: rgb(102, 101, 101);
+    background-image: url("./img/bosque.jpg");
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.howto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 80vw;
+    margin: auto;
+}
+
+.howto h1{
+    font-size: 5em;
+    color: whitesmoke;
+}
+
+.steps{
+    display: flex;
+    
+    justify-content: center;
+    
+    color:white;
+    
+}
+
+.steps > div
+{
+  border:1px rgba(248, 248, 248, 0.67) solid;
+  text-align:center;
+  box-shadow: 10px 10px 26px 6px rgba(0,0,0,0.75);
+  margin: 0.2vh;  
+}
+
+.steps img{
+    height: 50%;
+    
+}
+
+.first, .second, .third{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.50) ;
+    border-radius: 50%;
+   
+
+}
+
+.first:hover, .second:hover, .third:hover{
+    background: rgba(248, 248, 248, 0.77);
+    box-shadow: inset 10px 10px 26px 6px rgba(0,0,0,0.75);
+    transition: all 0.5s ease-in;
+    
 }
 
 .espejo{
-    height: 100vh;
+    height: 90vh;
     width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: lightgreen;
     background-image: url("./img/espejo.jpg");
     background-repeat: repeat;
     background-size: contain;
@@ -38,10 +99,160 @@
 .btn{
     cursor: pointer;
     
+    
 }
 
 .footer{
-    height: 100vh;
+    height: 5vh;
     width: 100vw;
-    background: lightsalmon;
+    background: rgba(0,0,0,0.75);
+    position: fixed;
+    bottom: 0;
+    box-shadow: 0px -11px 18px -2px rgba(0,0,0,0.67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(248, 248, 248);
 }
+
+.social{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 10%;
+}
+.social a{
+    text-decoration: none;
+    color: rgb(248, 248, 248);
+    
+}
+
+.social a:hover{
+    
+    color: rgb(57, 201, 57);
+    transition: all 0.7s ease-in;
+}
+
+@media only screen and (max-width: 768px) {
+    .steps{
+        display: block;
+    }
+
+    .first, .second, .third{
+        height: 30vh;
+        width: 30vw;
+        
+    }
+
+  }
+
+  @media only screen and (max-width: 320px) {
+    .steps{
+        display: block;
+    }
+
+    .first, .second, .third{
+        height: 30vh;
+        width: 50vw;
+        
+    }
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+
+    .first, .second, .third{
+        height: 50vh;
+        width: 30vw;
+        
+    }
+
+  }
+
+  @media only screen and (max-width: 1440px) {
+
+
+    .first, .second, .third{
+        height: 50vh;
+        width: 30vw;
+        
+    }
+
+  }
+
+
+  .scrolling {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    
+    
+  }
+
+  .chevron {
+    position: absolute;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+
+
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: #fff;
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(30px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
