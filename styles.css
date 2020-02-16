@@ -33,6 +33,7 @@
 }
 
 .steps{
+    
     display: flex;
     
     justify-content: center;
@@ -80,7 +81,7 @@ width: 30vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url("./img/espejo.jpg");
+    background-image: url("./img/nomirror.png");
     background-repeat: repeat;
     background-size: contain;
 }
@@ -152,6 +153,7 @@ width: 30vw;
   }
 
   @media only screen and (max-width: 426px) {
+
     .steps{
         display: block;
     }

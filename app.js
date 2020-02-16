@@ -11,9 +11,20 @@ const caty = [
     'tu, Catalina eres nuestra emperatriz',
     'Catalina, tu nos guiarás a la victoria',
     'contigo Catalina, seremos invencibles',
-    'gracias a ti Catalina, nuestra imperio no tendrá limites'
+    'gracias a ti Catalina, nuestro imperio no tendrá limites'
 ];
 
+const espejo = [
+    'tú, tu lo eres',
+    'tu eres esa persona',
+    'lo eres, que nadie te diga lo contrario'
+];
+
+const mirror = [
+ 'you, you are',
+ 'yes you are',
+ 'nobody but you'
+];
 
 const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
@@ -52,12 +63,23 @@ function readOutLoud (message){
         hablar[Math.floor(Math.random() * hablar.length)];
         speech.text = finalText;
 
+    }else if(message.includes('espejito')) {
+        const finalText = 
+        espejo[Math.floor(Math.random() * espejo.length)];
+        speech.text = finalText;
     }
 
     //editado para la emperatriz
     if(message.includes('emperatriz')) {
         const finalText = 
         caty[Math.floor(Math.random() * caty.length)];
+        speech.text = finalText;
+    }
+
+    //editado para la emperatriz
+    if(message.includes('mirror')) {
+        const finalText = 
+        mirror[Math.floor(Math.random() * mirror.length)];
         speech.text = finalText;
     }
 
